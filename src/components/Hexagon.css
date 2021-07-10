@@ -4,6 +4,7 @@
   width: 100px;
   border-radius: 6px;
   background: rgba(128, 128, 128, 1);
+  justify-self: center;
   align-self: center;
   text-align: center;
   vertical-align: middle;

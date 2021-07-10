@@ -1,25 +1,20 @@
-import { useEffect, useState } from "react";
-import axios from "axios";
-import { baseURL, config, sortByCreatedTime } from "./services";
+import { useContext } from "react";
+import Attempt from "./components/Attempt";
 import Hexagon from "./components/Hexagon";
+import { Context } from "./context";
 import "./App.css";
 
 function App() {
-  const [records, setRecords] = useState([]);
-
-  useEffect(() => {
-    const fetchRecords = async () => {
-      // const resp = await axios.get(baseURL, config);
-      // setRecords(sortByCreatedTime(resp.data.records))
-    }
-    fetchRecords();
-  }, []);
-
-  const letters = ["F", "A", "C", "T", "O", "R", "Y"];
+  const { currentLetters } = useContext(Context);
 
   return (
-    <div className="hexagon-container">
-      {letters.map((letter, index) => <Hexagon letter={letter} index={index} />)}
+    <div>
+      <main className="hexagon-container">
+        {currentLetters.map((letter, index) => (
+          <Hexagon letter={letter} index={index} />
+        ))}
+      </main>
+      <Attempt />
     </div>
   );
 }

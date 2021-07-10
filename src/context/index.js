@@ -8,6 +8,7 @@ export const Provider = ({ children }) => {
   const [currentLetters, setCurrentLetters] = useState([]);
   const [foundWords, setFoundWords] = useState([]);
   const [possibleWords, setPossibleWords] = useState([]);
+  const [currentGuess, setCurrentGuess] = useState([]);
 
   useEffect(() => {
     if (possibleWords.length < 10) {
@@ -27,6 +28,8 @@ export const Provider = ({ children }) => {
     setCurrentLetters,
     possibleWords,
     setPossibleWords,
+    currentGuess,
+    setCurrentGuess,
   };
 
   return <Context.Provider value={contextValue}>{children}</Context.Provider>;
