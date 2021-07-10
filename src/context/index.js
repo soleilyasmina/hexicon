@@ -9,6 +9,7 @@ export const Provider = ({ children }) => {
   const [foundWords, setFoundWords] = useState([]);
   const [possibleWords, setPossibleWords] = useState([]);
   const [currentGuess, setCurrentGuess] = useState([]);
+  const [displayLetters, setDisplayLetters] = useState([]);
 
   useEffect(() => {
     if (possibleWords.length < 10) {
@@ -17,9 +18,35 @@ export const Provider = ({ children }) => {
   }, [possibleWords]);
 
   useEffect(() => {
+    setDisplayLetters(currentLetters);
     setFoundWords([]);
     setPossibleWords(generateWordList(currentLetters));
   }, [currentLetters]);
+
+  const shuffleLetters = () => {
+    setDisplayLetters((curr) => {
+      const main = curr[3];
+      const others = curr
+        .filter((_, i) => i !== 3)
+        .sort(() => (Math.random() >= 0.5 ? 1 : -1));
+      others.splice(3, 0, main);
+      return [...others];
+    });
+  };
+
+  const makeGuess = () => {
+    if (!currentGuess.includes(currentLetters[3])) {
+      console.log("a");
+    } else if (currentGuess.length < 4) {
+      console.log("b");
+    } else if (foundWords.includes(currentGuess.join("").toLowerCase())) {
+      console.log("c");
+    } else if (possibleWords.includes(currentGuess.join("").toLowerCase())) {
+      console.log("d");
+      setFoundWords((curr) => [...curr, currentGuess.join("").toLowerCase()]);
+    }
+    setCurrentGuess([]);
+  };
 
   const contextValue = {
     foundWords,
@@ -30,6 +57,10 @@ export const Provider = ({ children }) => {
     setPossibleWords,
     currentGuess,
     setCurrentGuess,
+    displayLetters,
+    setDisplayLetters,
+    shuffleLetters,
+    makeGuess,
   };
 
   return <Context.Provider value={contextValue}>{children}</Context.Provider>;

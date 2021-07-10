@@ -24,9 +24,6 @@ export const generateWordList = (letters) => {
   return words.reduce((list, word, index) => {
     const wordSet = new Set(word.toUpperCase().split(""));
     const difference = [...wordSet].filter((letter) => !letterSet.has(letter));
-    if (!difference.length) {
-      console.log(word);
-    }
     if (!difference.length && wordSet.has(letters[3]) && word.length >= 4) {
       list.push(word);
     }

@@ -7,7 +7,7 @@ const Attempt = () => {
 
   return (
     <form>
-      <input value={currentGuess.join('')} />
+      <input value={currentGuess.join('')} required min={4} disabled />
     </form>
   )
 }
