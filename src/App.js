@@ -8,13 +8,13 @@ function App() {
   const { currentLetters } = useContext(Context);
 
   return (
-    <div>
+    <div className="App">
+      <Attempt />
       <main className="hexagon-container">
         {currentLetters.map((letter, index) => (
           <Hexagon letter={letter} index={index} />
         ))}
       </main>
-      <Attempt />
     </div>
   );
 }

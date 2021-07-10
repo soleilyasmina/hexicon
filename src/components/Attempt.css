@@ -16,35 +16,3 @@ input {
   font-weight: 700;
   font-size: 36px;
 }
-
-@keyframes fadein {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-form span {
-  position: absolute;
-  font-family: "Encode Sans SC";
-  font-weight: 400;
-  font-size: 20px;
-  padding: 0 6px 2px;
-  right: 0;
-  text-align: center;
-  vertical-align: middle;
-  box-sizing: border-box;
-  background: transparent;
-  transition: all 0.2s;
-  top: 0;
-  animation: fadein 0.2s 1;
-  opacity: 1;
-}
-
-form span:hover {
-  background: black;
-  color: white;
-  cursor: pointer;
-}

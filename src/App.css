@@ -1,3 +1,12 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
 .hexagon-container {
   display: grid;
   grid-template-areas:
@@ -38,4 +47,3 @@
 .hexagon:nth-child(7) {
   grid-area: G;
 }
-
