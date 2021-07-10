@@ -1,0 +1,19 @@
+section {
+  font-size: 36px;
+  font-weight: 700;
+  font-family: "Encode Sans SC";
+  text-align: right;
+  padding: 0 32px;
+  box-sizing: border-box;
+  grid-column: 2 / 3;
+  grid-row: 2 / 4;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  font-family: "Encode Sans SC";
+  font-weight: 400;
+}

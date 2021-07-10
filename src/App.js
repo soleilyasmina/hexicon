@@ -2,6 +2,7 @@ import { useContext } from "react";
 import Attempt from "./components/Attempt";
 import Hexagon from "./components/Hexagon";
 import Options from "./components/Options";
+import WordList from "./components/WordList";
 import { Context } from "./context";
 import "./App.css";
 
@@ -17,6 +18,7 @@ function App() {
         ))}
       </main>
       <Options />
+      <WordList />
     </div>
   );
 }

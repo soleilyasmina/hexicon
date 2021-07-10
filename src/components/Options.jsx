@@ -6,9 +6,9 @@ const Options = () => {
   const { makeGuess, setCurrentGuess, shuffleLetters } = useContext(Context);
 
   return (
-    <div>
+    <div className="options">
       <button onClick={() => setCurrentGuess([])}>Delete</button>
-      <button onClick={shuffleLetters}>⟲</button>
+      <button onClick={shuffleLetters}>⟳</button>
       <button onClick={makeGuess}>Enter</button>
     </div>
   )

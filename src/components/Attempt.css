@@ -1,18 +1,19 @@
 form {
   position: relative;
   margin: 0 auto;
-  width: 250px;
+  width: 300px;
   display: flex;
   justify-content: center;
+  height: 78px;
+  align-self: center;
 }
-
 input {
-  margin: 0 auto;
-  width: 250px;
   text-align: center;
   box-sizing: border-box;
-  padding: 16px;
-  font-family: "Encode Sans SC";
-  font-weight: 700;
+  width: inherit;
+  margin: 0 auto;
   font-size: 36px;
+  font-family: "Encode Sans SC";
+  padding: 36px;
+  font-weight: 700;
 }
