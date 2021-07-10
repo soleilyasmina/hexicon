@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { baseURL, config, sortByCreatedTime } from "./services";
+import Hexagon from "./components/Hexagon";
 import "./App.css";
 
 function App() {
@@ -14,9 +15,11 @@ function App() {
     fetchRecords();
   }, []);
 
+  const letters = ["F", "A", "C", "T", "O", "R", "Y"];
+
   return (
-    <div className="App">
-      { /* get hacking! */ }
+    <div className="hexagon-container">
+      {letters.map((letter, index) => <Hexagon letter={letter} index={index} />)}
     </div>
   );
 }

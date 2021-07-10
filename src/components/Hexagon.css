@@ -1,0 +1,49 @@
+.hexagon, .hexagon:before, .hexagon:after {
+  transition: all 0.2s;
+  height: 63px;
+  width: 100px;
+  border-radius: 6px;
+  background: rgba(128, 128, 128, 1);
+  align-self: center;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 48px;
+  font-family: 'Encode Sans SC', sans-serif;
+}
+
+.hexagon {
+  position: relative;
+  z-index: 0;
+  color: black;
+}
+
+.hexagon:before,
+.hexagon:after {
+  content: "";
+  top: 0;
+  left: 0;
+  position: absolute;
+  border-radius: 6px;
+  z-index: -1;
+}
+
+.hexagon:after {
+  transform: rotate(-60deg);
+}
+
+.hexagon:before {
+  transform: rotate(60deg);
+}
+
+.hexagon:hover, .hexagon:hover::after, .hexagon:hover::before {
+  background: lightgray;
+  cursor: pointer;
+}
+
+.main, .main:after, .main:before {
+  background: goldenrod;
+}
+
+.main:hover, .main:hover:after, .main:hover:before {
+  background: gold;
+}

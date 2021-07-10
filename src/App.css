@@ -1,0 +1,41 @@
+.hexagon-container {
+  display: grid;
+  grid-template-areas:
+    ". . . . A A B B . . . ."
+    ". . . C C D D E E . . ."
+    ". . . . F F G G . . . .";
+  padding: 25px;
+  height: 300px;
+  width: 400px;
+  margin: 0 auto;
+  align-self: center;
+}
+
+.hexagon:nth-child(1) {
+  grid-area: A;
+}
+
+.hexagon:nth-child(2) {
+  grid-area: B;
+}
+
+.hexagon:nth-child(3) {
+  grid-area: C;
+}
+
+.hexagon:nth-child(4) {
+  grid-area: D;
+}
+
+.hexagon:nth-child(5) {
+  grid-area: E;
+}
+
+.hexagon:nth-child(6) {
+  grid-area: F;
+}
+
+.hexagon:nth-child(7) {
+  grid-area: G;
+}
+
