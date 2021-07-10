@@ -11,9 +11,24 @@ section {
 
 ul {
   list-style: none;
+  overflow-x: scroll;
+  max-height: 300px;
+  margin: 0;
+  padding: 0;
 }
 
 li {
   font-family: "Encode Sans SC";
   font-weight: 400;
+}
+
+@media screen and (max-width: 768px) {
+  ul, section {
+    text-align: center;
+  }
+  
+  section {
+    margin-top: 16px;
+    font-size: 30px;
+  }
 }

@@ -36,13 +36,9 @@ export const Provider = ({ children }) => {
 
   const makeGuess = () => {
     if (!currentGuess.includes(currentLetters[3])) {
-      console.log("a");
     } else if (currentGuess.length < 4) {
-      console.log("b");
     } else if (foundWords.includes(currentGuess.join("").toLowerCase())) {
-      console.log("c");
     } else if (possibleWords.includes(currentGuess.join("").toLowerCase())) {
-      console.log("d");
       setFoundWords((curr) => [...curr, currentGuess.join("").toLowerCase()]);
     }
     setCurrentGuess([]);

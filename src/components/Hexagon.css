@@ -7,7 +7,9 @@
   }
 }
 
-.hexagon, .hexagon:before, .hexagon:after {
+.hexagon,
+.hexagon:before,
+.hexagon:after {
   animation: fadein 1s;
   transition: all 0.2s;
   height: 63px;
@@ -19,7 +21,7 @@
   text-align: center;
   vertical-align: middle;
   font-size: 48px;
-  font-family: 'Encode Sans SC', sans-serif;
+  font-family: "Encode Sans SC", sans-serif;
 }
 
 .hexagon {
@@ -46,15 +48,31 @@
   transform: rotate(60deg);
 }
 
-.hexagon:hover, .hexagon:hover::after, .hexagon:hover::before {
+.hexagon:hover,
+.hexagon:hover::after,
+.hexagon:hover::before {
   background: lightgray;
   cursor: pointer;
 }
 
-.main, .main:after, .main:before {
+.main,
+.main:after,
+.main:before {
   background: goldenrod;
 }
 
-.main:hover, .main:hover:after, .main:hover:before {
+.main:hover,
+.main:hover:after,
+.main:hover:before {
   background: gold;
+}
+
+@media screen and (max-width: 768px) {
+  .hexagon,
+  .hexagon:after,
+  .hexagon:before {
+    height: 55px;
+    width: 89px;
+    font-size: 42px;
+  }
 }
