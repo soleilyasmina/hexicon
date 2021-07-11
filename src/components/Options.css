@@ -12,7 +12,9 @@ button {
   font-size: 16px;
   font-family: "Encode Sans SC";
   transition: all 0.2s;
-  background: white;
+  background: inherit;
+  color: inherit;
+  border: 1px solid currentColor;
 }
 
 @media (hover: hover) {

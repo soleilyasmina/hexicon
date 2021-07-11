@@ -9,6 +9,7 @@
   margin: 0 auto;
   padding: 32px 0;
   box-sizing: border-box;
+  transition: all 0.2s;
 }
 
 .hexagon-container {
@@ -52,6 +53,16 @@
 
 .hexagon:nth-child(7) {
   grid-area: G;
+}
+
+.light {
+  background: white;
+  color: black;
+}
+
+.dark {
+  background: rgba(64, 64, 64, 1);
+  color: white;
 }
 
 @media screen and (max-width: 768px) {

@@ -2,15 +2,51 @@ nav {
   width: 100vw;
   position: fixed;
   top: 0;
-  background: white;
-  border-bottom: 1px solid black;
+  background: inherit;
+  border-bottom: 1px solid currentColor;
   box-sizing: border-box;
   z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 8px;
 }
 
 h1 {
   margin: 4px 0;
   text-align: center;
   font-family: "Encode Sans SC";
+  color: inherit;
   font-size: 36px;
+}
+
+nav span {
+  height: 38px;
+  margin: 6px 0;
+  font-size: 28px;
+  background: transparent;
+  padding: 0 8px 4px;
+  border: 1px solid currentColor;
+  border-radius: 100%;
+  font-family: "Encode Sans SC";
+  transition: all 0.2s;
+}
+
+.light nav span {
+  padding: 2px 13px 0;
+}
+
+@media (hover: hover) {
+  nav span:hover {
+    cursor: pointer;
+  }
+
+  .dark nav span:hover {
+    color: rgba(64, 64, 64, 1);
+    background: white;
+  }
+
+  .light nav span:hover {
+    color: white;
+    background: rgba(64, 64, 64, 1);
+  }
 }

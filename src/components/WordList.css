@@ -4,7 +4,7 @@ section {
   font-weight: 700;
   font-family: "Encode Sans SC";
   text-align: right;
-  padding: 0 32px;
+  padding: 0 48px 0 0;
   max-width: 768px;
   box-sizing: border-box;
   grid-column: 2 / 3;
@@ -25,7 +25,7 @@ ul {
   overflow-x: scroll;
   max-height: 300px;
   margin: 0;
-  padding: 0;
+  padding: 0 12px 0 0;
 }
 
 li {

@@ -5,11 +5,12 @@ export const Context = createContext();
 Context.displayName = "BeeContext";
 
 export const Provider = ({ children }) => {
-  const [currentLetters, setCurrentLetters] = useState([]);
+  const [currentLetters, setCurrentLetters] = useState(generateLetterSet());
   const [foundWords, setFoundWords] = useState([]);
   const [possibleWords, setPossibleWords] = useState([]);
   const [currentGuess, setCurrentGuess] = useState([]);
   const [displayLetters, setDisplayLetters] = useState([]);
+  const [darkMode, setDarkMode] = useState(true);
 
   useEffect(() => {
     if (possibleWords.length < 10) {
@@ -57,6 +58,8 @@ export const Provider = ({ children }) => {
     setDisplayLetters,
     shuffleLetters,
     makeGuess,
+    darkMode,
+    setDarkMode,
   };
 
   return <Context.Provider value={contextValue}>{children}</Context.Provider>;

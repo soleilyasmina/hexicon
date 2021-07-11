@@ -8,10 +8,10 @@ import { Context } from "./context";
 import "./App.css";
 
 function App() {
-  const { displayLetters } = useContext(Context);
+  const { darkMode, displayLetters } = useContext(Context);
 
   return (
-    <div className="App">
+    <div className={`App ${darkMode ? 'dark' : 'light'}`}>
       <Nav />
       <Attempt />
       <main className="hexagon-container">

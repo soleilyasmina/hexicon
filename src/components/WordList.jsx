@@ -1,6 +1,5 @@
 import { useContext } from "react";
 import { Context } from "../context";
-import { generatePoints } from "../utils";
 import "./WordList.css";
 
 const WordList = () => {
