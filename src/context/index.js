@@ -40,7 +40,13 @@ export const Provider = ({ children }) => {
     } else if (currentGuess.length < 4) {
     } else if (foundWords.includes(currentGuess.join("").toLowerCase())) {
     } else if (possibleWords.includes(currentGuess.join("").toLowerCase())) {
-      setFoundWords((curr) => [...curr, currentGuess.join("").toLowerCase()].sort(alphaLengthSort));
+      if (foundWords.length - 1 === possibleWords.length) {
+        setCurrentLetters(generateLetterSet());
+      } else {
+        setFoundWords((curr) =>
+          [...curr, currentGuess.join("").toLowerCase()].sort(alphaLengthSort)
+        );
+      }
     }
     setCurrentGuess([]);
   };
