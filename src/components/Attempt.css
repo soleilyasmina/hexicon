@@ -16,7 +16,7 @@ input {
   width: inherit;
   margin: 0 auto;
   font-size: 36px;
-  font-family: "Encode Sans SC";
+  font-family: "Encode Sans SC", sans-serif;
   padding: 36px;
   font-weight: 700;
 }

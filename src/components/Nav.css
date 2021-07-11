@@ -14,7 +14,7 @@ nav {
 h1 {
   margin: 4px 0;
   text-align: center;
-  font-family: "Encode Sans SC";
+  font-family: "Encode Sans SC", sans-serif;
   color: inherit;
   font-size: 36px;
 }
@@ -27,7 +27,7 @@ nav span {
   padding: 0 8px 4px;
   border: 1px solid currentColor;
   border-radius: 100%;
-  font-family: "Encode Sans SC";
+  font-family: "Encode Sans SC", sans-serif;
   transition: all 0.2s;
 }
 

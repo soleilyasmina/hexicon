@@ -2,7 +2,7 @@ section {
   font-size: 36px;
   margin-top: 16px;
   font-weight: 700;
-  font-family: "Encode Sans SC";
+  font-family: "Encode Sans SC", sans-serif;
   text-align: right;
   padding: 0 48px 0 0;
   max-width: 768px;
@@ -29,7 +29,7 @@ ul {
 }
 
 li {
-  font-family: "Encode Sans SC";
+  font-family: "Encode Sans SC", sans-serif;
   font-weight: 400;
 }
 

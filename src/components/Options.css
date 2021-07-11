@@ -10,7 +10,7 @@ button {
   border-radius: 6px;
   margin: 0 12px;
   font-size: 16px;
-  font-family: "Encode Sans SC";
+  font-family: "Encode Sans SC", sans-serif;
   transition: all 0.2s;
   background: inherit;
   color: inherit;
