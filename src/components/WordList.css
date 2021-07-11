@@ -1,12 +1,23 @@
 section {
   font-size: 36px;
+  margin-top: 16px;
   font-weight: 700;
   font-family: "Encode Sans SC";
   text-align: right;
   padding: 0 32px;
+  max-width: 768px;
   box-sizing: border-box;
   grid-column: 2 / 3;
   grid-row: 2 / 5;
+}
+
+article {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  font-weight: 400;
+  text-align: right;
+  padding: 0 6px;
 }
 
 ul {
@@ -23,12 +34,13 @@ li {
 }
 
 @media screen and (max-width: 768px) {
-  ul, section {
+  ul,
+  section,
+  article {
     text-align: center;
   }
-  
+
   section {
-    margin-top: 16px;
     font-size: 30px;
   }
 

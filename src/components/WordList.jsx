@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { Context } from "../context";
+import { generatePoints } from "../utils";
 import "./WordList.css";
 
 const WordList = () => {
@@ -7,7 +8,12 @@ const WordList = () => {
 
   return (
     <section>
-      FOUND WORDS <br/> {foundWords.length} / {possibleWords.length}
+      FOUND WORDS
+      <article>
+        <span>
+          {foundWords.length} / {possibleWords.length}
+        </span>
+      </article>
       <hr/>
       <ul>
         {foundWords.map((word) => <li key={word}>{word}</li>)}

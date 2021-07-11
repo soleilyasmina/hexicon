@@ -15,7 +15,9 @@ button {
   background: white;
 }
 
-button:hover {
-  background: lightgrey;
-  cursor: pointer;
+@media (hover: hover) {
+  button:hover {
+    background: lightgrey;
+    cursor: pointer;
+  }
 }

@@ -48,23 +48,24 @@
   transform: rotate(60deg);
 }
 
-.hexagon:hover,
-.hexagon:hover::after,
-.hexagon:hover::before {
-  background: lightgray;
-  cursor: pointer;
-}
-
 .main,
 .main:after,
 .main:before {
   background: goldenrod;
 }
 
-.main:hover,
-.main:hover:after,
-.main:hover:before {
-  background: gold;
+@media (hover: hover) {
+  .hexagon:hover,
+  .hexagon:hover::after,
+  .hexagon:hover::before {
+    background: lightgray;
+    cursor: pointer;
+  }
+  .main:hover,
+  .main:hover:after,
+  .main:hover:before {
+    background: gold;
+  }
 }
 
 @media screen and (max-width: 768px) {
