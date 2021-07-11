@@ -1,0 +1,16 @@
+nav {
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  background: white;
+  border-bottom: 1px solid black;
+  box-sizing: border-box;
+  z-index: 1000;
+}
+
+h1 {
+  margin: 4px 0;
+  text-align: center;
+  font-family: "Encode Sans SC";
+  font-size: 36px;
+}

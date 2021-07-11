@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from "react";
-import { generateLetterSet, generateWordList } from "../utils";
+import { alphaLengthSort, generateLetterSet, generateWordList } from "../utils";
 
 export const Context = createContext();
 Context.displayName = "BeeContext";
@@ -39,7 +39,7 @@ export const Provider = ({ children }) => {
     } else if (currentGuess.length < 4) {
     } else if (foundWords.includes(currentGuess.join("").toLowerCase())) {
     } else if (possibleWords.includes(currentGuess.join("").toLowerCase())) {
-      setFoundWords((curr) => [...curr, currentGuess.join("").toLowerCase()]);
+      setFoundWords((curr) => [...curr, currentGuess.join("").toLowerCase()].sort(alphaLengthSort));
     }
     setCurrentGuess([]);
   };

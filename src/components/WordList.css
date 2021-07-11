@@ -6,7 +6,7 @@ section {
   padding: 0 32px;
   box-sizing: border-box;
   grid-column: 2 / 3;
-  grid-row: 2 / 4;
+  grid-row: 2 / 5;
 }
 
 ul {
@@ -30,5 +30,9 @@ li {
   section {
     margin-top: 16px;
     font-size: 30px;
+  }
+
+  section br {
+    display: none;
   }
 }

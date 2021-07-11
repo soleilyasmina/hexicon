@@ -1,6 +1,6 @@
 .App {
   display: grid;
-  grid-template-rows: 1fr 3fr 1fr;
+  grid-template-rows: 70px 1fr 3fr 1fr;
   grid-template-columns: 3fr 2fr;
   min-width: 100vw;
   min-height: 100vh;
@@ -13,7 +13,7 @@
 
 .hexagon-container {
   grid-column: 1 / 2;
-  grid-row: 2 / 3;
+  grid-row: 3 / 4;
   display: grid;
   grid-template-areas:
     ". . . . A A B B . . . ."
@@ -60,6 +60,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    padding-top: 70px;
   }
 
   .hexagon-container {

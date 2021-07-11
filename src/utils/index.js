@@ -30,3 +30,15 @@ export const generateWordList = (letters) => {
     return list;
   }, []).sort((a, b) => a.length - b.length);
 };
+
+export const alphaLengthSort = (a, b) => {
+  if (a.length < b.length) {
+    return 1;
+  } else if (a.length > b.length) {
+    return -1;
+  } else if (a < b) {
+    return 1;
+  } else {
+    return -1;
+  }
+}

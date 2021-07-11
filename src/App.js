@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import Attempt from "./components/Attempt";
 import Hexagon from "./components/Hexagon";
+import Nav from "./components/Nav";
 import Options from "./components/Options";
 import WordList from "./components/WordList";
 import { Context } from "./context";
@@ -11,6 +12,7 @@ function App() {
 
   return (
     <div className="App">
+      <Nav />
       <Attempt />
       <main className="hexagon-container">
         {displayLetters.map((letter, index) => (
